@@ -82,7 +82,7 @@
           "<p>" + escapeHtml(p.description) + "</p>" +
           '<a class="text-link" target="_blank" rel="noopener" href="' +
             waLink("Hi Freshly Modern! I'm interested in your " + p.title + ". Could you share what's available and the prices?") +
-            '">Ask for prices on WhatsApp →</a>' +
+            '">Prices on WhatsApp →</a>' +
         "</div>" +
       "</article>"
     );

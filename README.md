@@ -30,7 +30,7 @@ images/           All photos
 
 Each card's **Ask about the next date** button opens WhatsApp with "When is your next [workshop] workshop?" already typed out.
 
-**Change shop items:** edit the `PRODUCTS` list. Prices aren't shown on the site. Each item has an **Ask for prices on WhatsApp** button instead.
+**Change shop items:** edit the `PRODUCTS` list. Prices aren't shown on the site. Each item has an **Prices on WhatsApp** link instead.
 
 **Add photos:** put the photo in `images/` (a short name with no spaces, like `eid-box.jpg`) and type that name in `content.js`.
 
