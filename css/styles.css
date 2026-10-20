@@ -152,28 +152,22 @@ p { margin: 0 0 1em; }
 }
 .workshop-img { position: relative; }
 .workshop-img img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
-.badge {
-  position: absolute; top: 14px; left: 14px; padding: 6px 12px; border-radius: 999px;
-  font-size: .8rem; font-weight: 700;
-}
-.badge-few { background: var(--peach); color: #7a3b1f; }
-.badge-full { background: var(--ink); color: #fff; }
 .workshop-body { display: flex; flex-direction: column; flex: 1; padding: 22px 22px 24px; }
 .workshop-body h3 { font-size: 1.65rem; }
-.meta { list-style: none; padding: 0; margin: 0 0 14px; font-size: .93rem; color: var(--ink-soft); }
-.meta li { display: flex; gap: .6em; padding: 2px 0; }
 .workshop-body > p { color: var(--ink-soft); font-size: .97rem; }
 .workshop-foot { margin-top: auto; padding-top: 8px; }
-.price {
-  font-family: var(--font-head); font-size: 2.1rem; font-weight: 600; color: var(--accent);
-  margin-bottom: 12px; line-height: 1;
+
+/* Instagram announcement banner above the workshop cards */
+.announce {
+  display: flex; align-items: center; gap: 20px; margin: 0 auto 40px; max-width: 880px;
+  padding: 22px 26px; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--blue-soft), var(--violet-pink-soft) 55%, var(--peach-soft));
+  border: 1px solid var(--line);
 }
-.price span { font-size: 1.1rem; }
-.price small { font-family: var(--font-body); font-size: .85rem; color: var(--ink-soft); font-weight: 400; margin-left: .4em; }
-.empty-state {
-  grid-column: 1 / -1; text-align: center; background: var(--purple-soft);
-  padding: 40px 20px; border-radius: var(--radius);
-}
+.announce > .icon { width: 44px; height: 44px; color: var(--violet-pink); }
+.announce h3 { font-size: 1.45rem; margin-bottom: .15em; }
+.announce p { margin: 0; color: var(--ink-soft); }
+.announce .btn { margin-left: auto; white-space: nowrap; }
 
 /* ----- Booking steps ----- */
 .steps {
@@ -312,6 +306,8 @@ p { margin: 0 0 1em; }
   .perks { margin-top: 28px; }
   .perks li { font-size: .88rem; padding: 12px; }
   .workshop-grid { grid-template-columns: 1fr; }
+  .announce { flex-direction: column; align-items: flex-start; gap: 12px; padding: 22px 20px; }
+  .announce .btn { margin-left: 0; width: 100%; }
   .steps { grid-template-columns: 1fr; }
   .steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 16px; padding: 20px; }
   .step-num { grid-row: span 2; margin: 0; }

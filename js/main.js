@@ -14,17 +14,6 @@
     });
   }
 
-  function parseDate(iso) {
-    var p = iso.split("-");
-    return new Date(+p[0], +p[1] - 1, +p[2]);
-  }
-
-  function formatDate(iso) {
-    return parseDate(iso).toLocaleDateString("en-GB", {
-      weekday: "long", day: "numeric", month: "long", year: "numeric"
-    });
-  }
-
   var waIcon = '<svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>';
 
   // ---- Social / contact links ----
@@ -53,62 +42,25 @@
     el.textContent = SITE[el.getAttribute("data-text")] || "";
   });
 
-  // ---- Workshops ----
-  var today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  var upcoming = WORKSHOPS
-    .filter(function (w) { return parseDate(w.date) >= today; })
-    .sort(function (a, b) { return parseDate(a.date) - parseDate(b.date); });
-
-  var wList = document.getElementById("workshop-list");
-  if (!upcoming.length) {
-    wList.innerHTML =
-      '<div class="empty-state"><h3>New dates are on their way</h3>' +
-      "<p>Message us and we'll let you know as soon as the next workshops open.</p>" +
-      '<a class="btn btn-wa" target="_blank" rel="noopener" href="' +
-      waLink("Hi Freshly Modern! Please let me know when new workshop dates are out.") +
-      '">' + waIcon + "Notify me</a></div>";
-  } else {
-    wList.innerHTML = upcoming.map(function (w) {
-      var nice = formatDate(w.date);
-      var badge = "";
-      var button;
-      if (w.status === "full") {
-        badge = '<span class="badge badge-full">Fully booked</span>';
-        button = '<a class="btn btn-outline btn-block" target="_blank" rel="noopener" href="' +
-          waLink("Hi Freshly Modern! " + w.title + " on " + nice + " is full. Please add me to the waiting list. My name is ") +
-          '">Join the waiting list</a>';
-      } else {
-        if (w.status === "few") badge = '<span class="badge badge-few">Only a few seats left</span>';
-        button = '<a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="' +
-          waLink("Hi Freshly Modern! I'd like to book the " + w.title + " on " + nice + " (" + w.time + "). My name is ") +
-          '">' + waIcon + "Book on WhatsApp</a>";
-      }
-      return (
-        '<article class="workshop-card">' +
-          '<div class="workshop-img">' +
-            '<img src="' + escapeHtml(w.image) + '" alt="' + escapeHtml(w.title) + '" loading="lazy">' +
-            badge +
+  // ---- Workshop styles ----
+  document.getElementById("workshop-list").innerHTML = WORKSHOPS.map(function (w) {
+    return (
+      '<article class="workshop-card">' +
+        '<div class="workshop-img">' +
+          '<img src="' + escapeHtml(w.image) + '" alt="' + escapeHtml(w.title) + '" loading="lazy">' +
+        "</div>" +
+        '<div class="workshop-body">' +
+          "<h3>" + escapeHtml(w.title) + "</h3>" +
+          "<p>" + escapeHtml(w.description) + "</p>" +
+          '<div class="workshop-foot">' +
+            '<a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="' +
+              waLink("Hi Freshly Modern! When is your next " + w.title + " workshop? My name is ") +
+              '">' + waIcon + "Ask about the next date</a>" +
           "</div>" +
-          '<div class="workshop-body">' +
-            "<h3>" + escapeHtml(w.title) + "</h3>" +
-            '<ul class="meta">' +
-              '<li><span aria-hidden="true">📅</span>' + escapeHtml(nice) + "</li>" +
-              '<li><span aria-hidden="true">🕰️</span>' + escapeHtml(w.time) + "</li>" +
-              '<li><span aria-hidden="true">📍</span>' + escapeHtml(w.location) + "</li>" +
-              '<li><span aria-hidden="true">👭</span>Up to ' + escapeHtml(w.seats) + " guests</li>" +
-            "</ul>" +
-            "<p>" + escapeHtml(w.description) + "</p>" +
-            '<div class="workshop-foot">' +
-              '<p class="price"><span>AED</span> ' + escapeHtml(w.price) + '<small>per person</small></p>' +
-              button +
-            "</div>" +
-          "</div>" +
-        "</article>"
-      );
-    }).join("");
-  }
+        "</div>" +
+      "</article>"
+    );
+  }).join("");
 
   // ---- Deposit info ----
   var d = SITE.deposit;

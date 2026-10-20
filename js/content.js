@@ -6,9 +6,8 @@
 
    Tips
    - Keep the quote marks and the commas at the end of lines.
-   - Dates use the format "YYYY-MM-DD", e.g. "2026-11-07".
-     The weekday is added automatically.
-   - Workshops whose date has passed hide themselves.
+   - Workshop dates are announced on Instagram, so there are
+     no dates to update here.
    - Photos live in the "images" folder. To use a new photo,
      drop it in that folder and type its file name here.
    ========================================================= */
@@ -17,9 +16,9 @@ const SITE = {
   // ---- Contact ------------------------------------------------
   whatsappNumber: "971502050335",               // digits only, with country code
   whatsappLink: "https://iwtsp.com/971502050335",
-  instagram: "https://www.instagram.com/freshlymodernuae?xtok=MWRhMW5iZW0xdWswZg==",
-  facebook: "#",   // TODO: paste Facebook page link
-  tiktok: "#",     // TODO: paste TikTok link
+  instagram: "https://www.instagram.com/freshlymodernuae?srtk=MWRhMW5iZW0xdWswZg==",
+  facebook: "https://www.facebook.com/share/1KVEETHPGj/?mibextid=wwXIfr",
+  tiktok: "https://www.tiktok.com/@freshlymodernuae?_r=1&_t=ZS-9AiMZU2744a",
   snapchat: "#",   // TODO: paste Snapchat link
   city: "Dubai, UAE",
 
@@ -33,75 +32,39 @@ const SITE = {
   }
 };
 
-/* ---- Upcoming workshops ---------------------------------------
-   status: "open", "few" (only a few seats left) or "full"
+/* ---- Workshop styles -------------------------------------------
+   The crafts we run workshops in. Add, remove or reorder freely.
    ----------------------------------------------------------------- */
 const WORKSHOPS = [
   {
-    title: "Floral Candle Workshop",
-    date: "2026-11-07",
-    time: "11:00 am to 1:30 pm",
-    location: "Dubai studio",
-    price: 350,
-    seats: 8,
-    status: "open",
+    title: "Floral Candles",
     image: "images/floral-candles.jpg",
-    description: "Pour and colour your own peony, rose and daisy candles in soft pastel shades. You leave with a full tray of blooms."
+    description: "Pour and colour your own peony, rose and daisy candles in soft pastel shades."
   },
   {
-    title: "Natural Rose Soap Making",
-    date: "2026-11-14",
-    time: "4:00 pm to 6:00 pm",
-    location: "Dubai studio",
-    price: 280,
-    seats: 8,
-    status: "few",
+    title: "Natural Soap Making",
     image: "images/rose-soaps.jpg",
-    description: "Gentle, skin-loving soaps finished with real dried rose petals and buds. Learn the basics you can repeat at home."
+    description: "Gentle, skin-loving soaps finished with real dried rose petals and buds."
   },
   {
     title: "Scented Wax Tags",
-    date: "2026-11-22",
-    time: "11:00 am to 1:00 pm",
-    location: "Dubai studio",
-    price: 220,
-    seats: 10,
-    status: "open",
     image: "images/wax-tags-eucalyptus.jpg",
-    description: "Fragrant wax sachets with dried flowers and brass eyelets. Perfect for wardrobes, cars and little thank you gifts."
+    description: "Fragrant wax sachets with dried flowers and brass eyelets, perfect for wardrobes and little gifts."
   },
   {
-    title: "Candle Cake Masterclass",
-    date: "2026-11-28",
-    time: "3:00 pm to 6:00 pm",
-    location: "Dubai studio",
-    price: 420,
-    seats: 6,
-    status: "open",
+    title: "Candle Cakes",
     image: "images/candle-cake.jpg",
-    description: "Our showstopper. Build a cake that's entirely candle, with macarons, berries and a touch of gold."
+    description: "Build a showstopper cake that's entirely candle, with macarons, berries and a touch of gold."
   },
   {
-    title: "Soap Flower Bouquet",
-    date: "2026-12-05",
-    time: "11:00 am to 2:00 pm",
-    location: "Dubai studio",
-    price: 380,
-    seats: 8,
-    status: "open",
+    title: "Soap Flower Bouquets",
     image: "images/soap-flower-bouquet-gold.jpg",
     description: "Shape soap roses and peonies, brush them with gold and arrange your own keepsake bouquet."
   },
   {
-    title: "Festive Gift Box Workshop",
-    date: "2026-12-12",
-    time: "4:00 pm to 6:30 pm",
-    location: "Dubai studio",
-    price: 320,
-    seats: 10,
-    status: "open",
+    title: "Gift Boxes",
     image: "images/flower-gift-box.jpg",
-    description: "Make a flower box with a personal message card. Bring a friend and make one for each other."
+    description: "Make a flower box with a personal message card. Lovely to do with a friend."
   }
 ];
 
