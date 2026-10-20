@@ -201,8 +201,7 @@ p { margin: 0 0 1em; }
 .product-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .product-body { padding: 18px 18px 22px; display: flex; flex-direction: column; flex: 1; }
 .product-body h3 { font-size: 1.4rem; margin-bottom: .2em; }
-.product-price { color: var(--violet-pink); font-weight: 700; margin-bottom: .6em; }
-.product-body p:not(.product-price) { color: var(--ink-soft); font-size: .93rem; }
+.product-body p { color: var(--ink-soft); font-size: .93rem; }
 .product-body .text-link { margin-top: auto; }
 
 /* ----- Split / private events ----- */

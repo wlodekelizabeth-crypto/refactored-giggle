@@ -79,11 +79,10 @@
         '<img src="' + escapeHtml(p.image) + '" alt="' + escapeHtml(p.title) + '" loading="lazy">' +
         '<div class="product-body">' +
           "<h3>" + escapeHtml(p.title) + "</h3>" +
-          '<p class="product-price">' + escapeHtml(p.price) + "</p>" +
           "<p>" + escapeHtml(p.description) + "</p>" +
           '<a class="text-link" target="_blank" rel="noopener" href="' +
-            waLink("Hi Freshly Modern! I'm interested in your " + p.title + ". Could you share what's available?") +
-            '">Order on WhatsApp →</a>' +
+            waLink("Hi Freshly Modern! I'm interested in your " + p.title + ". Could you share what's available and the prices?") +
+            '">Ask for prices on WhatsApp →</a>' +
         "</div>" +
       "</article>"
     );

@@ -72,25 +72,21 @@ const WORKSHOPS = [
 const PRODUCTS = [
   {
     title: "Handmade Candles",
-    price: "From AED 45",
     image: "images/floral-candles.jpg",
     description: "Sculpted flower candles, candle cakes and decorative pieces, poured by hand in small batches."
   },
   {
     title: "Natural Soaps",
-    price: "From AED 30",
     image: "images/rose-soaps.jpg",
     description: "Kind to skin, finished with botanicals. Lovely for your own shelf or as a guest favour."
   },
   {
     title: "Gift Boxes",
-    price: "From AED 150",
     image: "images/soap-flower-bouquet-gold.jpg",
     description: "Ready to give bouquets and boxes for birthdays, new babies, Eid and thank yous. Custom cards included."
   },
   {
     title: "Scented Wax Tags & Melts",
-    price: "From AED 25",
     image: "images/wax-melts-lilac.jpg",
     description: "Little fragrant touches for drawers, cars and gift wrapping. Custom wording available for events."
   }
