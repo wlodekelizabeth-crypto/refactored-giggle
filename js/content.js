@@ -16,9 +16,9 @@ const SITE = {
   // ---- Contact ------------------------------------------------
   whatsappNumber: "971502050335",               // digits only, with country code
   whatsappLink: "https://iwtsp.com/971502050335",
-  instagram: "https://www.instagram.com/freshlymodernuae?srtk=MWRhMW5iZW0xdWswZg==",
-  facebook: "https://www.facebook.com/share/1KVEETHPGj/?mibextid=wwXIfr",
-  tiktok: "https://www.tiktok.com/@freshlymodernuae?_r=1&_t=ZS-9AiMZU2744a",
+  instagram: "https://www.instagram.com/freshlymodernuae",
+  facebook: "https://www.facebook.com/share/1KVEETHPGj/",
+  tiktok: "https://www.tiktok.com/@freshlymodernuae",
   snapchat: "#",   // TODO: paste Snapchat link
   city: "Dubai, UAE",
 
